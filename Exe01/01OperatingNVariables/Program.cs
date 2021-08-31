@@ -24,7 +24,8 @@ namespace _01OperatingNVariables
             // Console.WriteLine($"2 + 3 = {sumResult}");
             // Console.WriteLine($"The value of other operation: {operationResult}");
             Console.WriteLine("Variables' values:");
-            Console.WriteLine("");
+            Console.WriteLine($"Sum Result: {sumResult}");
+            Console.WriteLine($"Operation Result: {operationResult}");
         }
     }
 }
