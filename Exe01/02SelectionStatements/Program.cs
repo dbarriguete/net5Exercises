@@ -97,22 +97,41 @@ namespace _02SelectionStatements
 
             // Switch statement with using patter matching
             Object myObject = null;
+            myObject = "my original string";
+            myObject = new StringBuilder ("my original string");
 
-            switch(myObject)
+            // switch(myObject)
+            // {
+            //     case String myString:
+            //         Console.WriteLine($"myObject is a string with the value: {myString}");
+            //         break;
+            //     case StringBuilder myBuilder:
+            //         Console.WriteLine("myObject is a StringBuilder");
+            //         break;
+            //     default:
+            //         Console.WriteLine("myObject is an Object, I don't know what type of");
+            //         break;
+            //     case null:
+            //         Console.WriteLine("myObject is null");
+            //         break;
+            // }
+
+
+            /// simplified switch syntax
+            string message;
+
+            message = myObject switch
             {
-                case String myString:
-                    Console.WriteLine($"myObject is a string with the value: {myString}");
-                    break;
-                case StringBuilder myBuilder:
-                    Console.WriteLine("myObject is a StringBuilder");
-                    break;
-                default:
-                    Console.WriteLine("myObject is an Object, I don't know what type of");
-                    break;
-                case null:
-                    Console.WriteLine("myObject is null");
-                    break;
-            }
+                String myString => $"myObject is a string with the value: {myString}",
+
+                StringBuilder => "myObject is a StringBuilder",
+
+                null => "myObject is null",
+                
+                _ => "myObject is an Object, I don't know what type of"
+            };
+
+            Console.WriteLine(message);
         }
     }
 }
