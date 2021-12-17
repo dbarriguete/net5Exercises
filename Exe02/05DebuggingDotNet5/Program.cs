@@ -28,8 +28,7 @@ namespace _05DebuggingDotNet5
                 Console.WriteLine("The information provided is not a decimal, only provide decimal values greater than 0.");
             }
         }
-
-
+        
         static decimal GetYearlyAmount (decimal monthlyAmount)
         {
             return (monthlyAmount*12);
