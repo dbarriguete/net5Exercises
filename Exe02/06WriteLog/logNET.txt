@@ -1,0 +1,2 @@
+Hello I'm the tracer, I'm ready to write a log. 2021/12/17 09:52:09
+This is a trace error
